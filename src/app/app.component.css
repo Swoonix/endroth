@@ -1,0 +1,32 @@
+* {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.example-full-width{
+  width: 100%;
+
+}
+
+.example-card {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .example-header-image {
+    background-image: url('../assets/loup1.jpg');
+    background-size: cover;
+  }
+
+  .example-header-image-2 {
+    background-image: url('../assets/loup2.jpg');
+    background-size: cover;
+  }
+
+  .example-header-image-3 {
+    background-image: url('../assets/loup3.jpg');
+    background-size: cover;
+  }
