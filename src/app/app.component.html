@@ -1,88 +1,104 @@
 <mat-tab-group>
-    <mat-tab label="Nouvelle découverte"> 
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Nouvelle découverte</mat-card-title>
-          <mat-card-subtitle>Administration</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-          <form class="example-form" (submit)="decouverte()" method="POST" id="test">
-            <mat-form-field class="example-full-width">
-              <input matInput type="number" placeholder="Niveau d'exploration" [(ngModel)]="explo_niveau" name="explo_niveau">
-            </mat-form-field>
-            <br>
-            <mat-form-field class="example-full-width">
-              <input matInput type="number" placeholder="Jauge astrale" [(ngModel)]="jauge_astrale" name="jauge_astrale">
-            </mat-form-field>
-            <br>Valeur bonus jauge astrale : {{bonus}}
-            <mat-divider style="margin-top: 10px" [inset]="true"></mat-divider>
-            <br>Numéro du dé : {{random_number}}
-            <mat-divider style="margin-top: 10px" [inset]="true"></mat-divider>
-            <br><p style="color:green">Résultat : {{resultat}}</p>
-            <mat-card-actions>
-              <button mat-raised-button color="primary" type="submit" value="Submit" style="float:right;">DECOUVERTE</button>
-            </mat-card-actions>
-          </form>
-        </mat-card-content>
-        <mat-card-actions>
-        </mat-card-actions>
-      </mat-card> </mat-tab>
-    <mat-tab label="Nouvelle découverte objet"> <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image-2"></div>
-          <mat-card-title>Nouvelle découverte objet</mat-card-title>
-          <mat-card-subtitle>Administration</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-          <form class="example-form" (submit)="decouverte_objet()" method="POST" id="test">
-            <mat-form-field class="example-full-width">
-              <input matInput type="number" placeholder="Niveau d'exploration" [(ngModel)]="explo_niveau" name="explo_niveau">
-            </mat-form-field>
-            <br>
-            <mat-form-field class="example-full-width">
-              <input matInput type="number" placeholder="Jauge astrale" [(ngModel)]="jauge_astrale" name="jauge_astrale">
-            </mat-form-field>
-            <br>Valeur bonus jauge astrale : {{bonus}}
-            <mat-divider style="margin-top: 10px" [inset]="true"></mat-divider>
-            <br>Numéro du dé : {{random_number_objet}}
-            <mat-divider style="margin-top: 10px" [inset]="true"></mat-divider>
-            <br><p style="color:green">Résultat : {{resultat_objet}}</p>
-            <mat-card-actions>
-              <button mat-raised-button color="primary" type="submit" value="Submit" style="float:right">DECOUVERTE</button>
-            </mat-card-actions>
-          </form>
-        </mat-card-content>
-        <mat-card-actions>
-        </mat-card-actions>
-      </mat-card> </mat-tab>
-    <mat-tab label="Nouvelle découverte collectionneur"> <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image-3"></div>
-          <mat-card-title>Nouvelle découverte collectionneur</mat-card-title>
-          <mat-card-subtitle>Administration</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-          <form class="example-form" (submit)="collectionneur()" method="POST" id="test">
-            <mat-form-field class="example-full-width">
-              <input matInput type="number" placeholder="Niveau du joueur" [(ngModel)]="perso_niveau" name="perso_niveau">
-            </mat-form-field>
-            <br>
-            <mat-form-field class="example-full-width">
-              <input matInput type="number" placeholder="Jauge astrale" [(ngModel)]="jauge_astrale" name="jauge_astrale">
-            </mat-form-field>
-            <br>Valeur bonus jauge astrale : {{bonus}}
-            <mat-divider style="margin-top: 10px" [inset]="true"></mat-divider>
-            <br>Numéro du dé : {{random_number_collectionneur}}
-            <mat-divider style="margin-top: 10px" [inset]="true"></mat-divider>
-            <br><p style="color:green">Résultat : {{resultat_collectionneur}}</p>
-            <mat-card-actions>
-              <button mat-raised-button color="primary" type="submit" value="Submit" style="float:right">DECOUVERTE</button>
-            </mat-card-actions>
-          </form>
-        </mat-card-content>
-        <mat-card-actions>
-        </mat-card-actions>
-      </mat-card> </mat-tab>
-  </mat-tab-group>
+  <mat-tab label="Découverte objet">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image-2"></div>
+        <mat-card-title>Nouvelle découverte objet</mat-card-title>
+        <mat-card-subtitle>Administration</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <form class="example-form" (submit)="decouverte_objet()" method="POST" id="test">
+          <mat-form-field class="example-full-width">
+            <input matInput type="number" placeholder="Niveau d'exploration" [(ngModel)]="explo_niveau" name="explo_niveau">
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+            <input matInput type="number" placeholder="Jauge astrale" [(ngModel)]="jauge_astrale" name="jauge_astrale">
+          </mat-form-field>
+          <br>Valeur bonus jauge astrale : {{bonus_2}}
+          <mat-divider style="margin-top: 10px" [inset]="true"></mat-divider>
+          <br>Numéro du dé : {{random_number_objet}}
+          <mat-divider style="margin-top: 10px" [inset]="true"></mat-divider>
+          <br>
+          <p style="color:green">Résultat : {{resultat_objet}}</p>
+          <mat-card-actions>
+            <button mat-raised-button color="primary" type="submit" value="Submit" style="float:right">DECOUVERTE</button>
 
+
+          </mat-card-actions>
+        </form>
+
+      </mat-card-content>
+      <mat-card-actions>
+      </mat-card-actions>
+    </mat-card>
+  </mat-tab>
+  <mat-tab label="Découverte">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Nouvelle découverte</mat-card-title>
+        <mat-card-subtitle>Administration</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <form class="example-form" (submit)="decouverte()" method="POST" id="test">
+          <mat-form-field class="example-full-width">
+            <input matInput type="number" placeholder="Niveau d'exploration" [(ngModel)]="explo_niveau" name="explo_niveau">
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+            <input matInput type="number" placeholder="Jauge astrale" [(ngModel)]="jauge_astrale" name="jauge_astrale">
+          </mat-form-field>
+          <br>Valeur bonus jauge astrale : {{bonus}}
+          <mat-divider style="margin-top: 10px" [inset]="true"></mat-divider>
+          <br>Numéro du dé : {{random_number}}
+          <mat-divider style="margin-top: 10px" [inset]="true"></mat-divider>
+          <br>
+          <p style="color:green">Résultat : {{resultat}}</p>
+          <mat-card-actions>
+            <button mat-raised-button color="primary" type="submit" value="Submit" style="float:right;">DECOUVERTE</button>
+          </mat-card-actions>
+        </form>
+
+      </mat-card-content>
+      <mat-card-actions>
+
+      </mat-card-actions>
+    </mat-card>
+  </mat-tab>
+  <mat-tab label="Découverte collectionneur">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image-3"></div>
+        <mat-card-title>Nouvelle découverte collectionneur</mat-card-title>
+        <mat-card-subtitle>Administration</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <form class="example-form" (submit)="collectionneur()" method="POST" id="test">
+          <mat-form-field class="example-full-width">
+            <input matInput type="number" placeholder="Niveau du joueur" [(ngModel)]="perso_niveau" name="perso_niveau">
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+            <input matInput type="number" placeholder="Jauge astrale" [(ngModel)]="jauge_astrale" name="jauge_astrale">
+          </mat-form-field>
+          <br>Valeur bonus jauge astrale : {{bonus_3}}
+          <mat-divider style="margin-top: 10px" [inset]="true"></mat-divider>
+          <br>Numéro du dé : {{random_number_collectionneur}}
+          <mat-divider style="margin-top: 10px" [inset]="true"></mat-divider>
+          <br>
+          <p style="color:green">Résultat : {{resultat_collectionneur}}</p>
+          <mat-card-actions>
+            <button mat-raised-button color="primary" type="submit" value="Submit" style="float:right">DECOUVERTE</button>
+
+
+          </mat-card-actions>
+        </form>
+
+      </mat-card-content>
+      <mat-card-actions>
+      </mat-card-actions>
+    </mat-card>
+  </mat-tab>
+</mat-tab-group>
+<button mat-raised-button color="warn" (click)="reset()" style="margin-left:50% !important; margin-right: auto !important; margin-top: 25px">RESET</button>

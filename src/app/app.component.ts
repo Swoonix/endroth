@@ -22,6 +22,8 @@ export class AppComponent implements OnInit {
   perso_niveau: number;
 
   bonus: number;
+  bonus_2: number;
+  bonus_3: number;
   explos: Explo[] = [
     { value: 0, viewValue: '0' },
     { value: 1, viewValue: '1' },
@@ -32,6 +34,18 @@ export class AppComponent implements OnInit {
     { value: 6, viewValue: '6' }
   ];
 
+  reset() {
+    this.random();
+    this.bonus = undefined;
+    this.bonus_2 = undefined;
+    this.bonus_3 = undefined;
+    this.resultat = undefined;
+    this.resultat_collectionneur = undefined;
+    this.resultat_objet = undefined,
+    this.explo_niveau = 0;
+    this.perso_niveau = 0;
+    this.jauge_astrale = 50;
+  }
 
 
   random() {
@@ -45,17 +59,20 @@ export class AppComponent implements OnInit {
     // this.random_number += this.jauge_astrale;
     if (this.jauge_astrale === 0) {
       this.bonus = -25;
+
     } else if (this.jauge_astrale > 0 && this.jauge_astrale <= 10) {
       this.bonus = -20;
+
     } else if (this.jauge_astrale > 10 && this.jauge_astrale <= 20) {
       this.bonus = -15;
+
     } else if (this.jauge_astrale > 20 && this.jauge_astrale <= 30) {
       this.bonus = -10;
+
     } else if (this.jauge_astrale > 30 && this.jauge_astrale <= 40) {
       this.bonus = -5;
     } else if (this.jauge_astrale > 40 && this.jauge_astrale < 60) {
       this.bonus = 0;
-
     } else if (this.jauge_astrale >= 60 && this.jauge_astrale < 70) {
       this.bonus = 5;
     } else if (this.jauge_astrale >= 70 && this.jauge_astrale < 80) {
@@ -68,6 +85,69 @@ export class AppComponent implements OnInit {
       this.bonus = 25;
     }
     return this.bonus;
+  }
+
+  astral_obj() {
+    if (this.jauge_astrale === 0) {
+      this.bonus_2 = -25;
+
+    } else if (this.jauge_astrale > 0 && this.jauge_astrale <= 10) {
+      this.bonus_2 = -20;
+
+    } else if (this.jauge_astrale > 10 && this.jauge_astrale <= 20) {
+      this.bonus_2 = -15;
+
+    } else if (this.jauge_astrale > 20 && this.jauge_astrale <= 30) {
+      this.bonus_2 = -10;
+
+    } else if (this.jauge_astrale > 30 && this.jauge_astrale <= 40) {
+      this.bonus_2 = -5;
+    } else if (this.jauge_astrale > 40 && this.jauge_astrale < 60) {
+      this.bonus_2 = 0;
+    } else if (this.jauge_astrale >= 60 && this.jauge_astrale < 70) {
+      this.bonus_2 = 5;
+    } else if (this.jauge_astrale >= 70 && this.jauge_astrale < 80) {
+      this.bonus_2 = 10;
+    } else if (this.jauge_astrale >= 80 && this.jauge_astrale < 90) {
+      this.bonus_2 = 15;
+    } else if (this.jauge_astrale >= 90 && this.jauge_astrale < 100) {
+      this.bonus_2 = 20;
+    } else if (this.jauge_astrale === 100) {
+      this.bonus_2 = 25;
+    }
+    return this.bonus_2;
+  }
+
+
+  astral_collectionneur() {
+    if (this.jauge_astrale === 0) {
+      this.bonus_3 = -25;
+
+    } else if (this.jauge_astrale > 0 && this.jauge_astrale <= 10) {
+      this.bonus_3 = -20;
+
+    } else if (this.jauge_astrale > 10 && this.jauge_astrale <= 20) {
+      this.bonus_3 = -15;
+
+    } else if (this.jauge_astrale > 20 && this.jauge_astrale <= 30) {
+      this.bonus_3 = -10;
+
+    } else if (this.jauge_astrale > 30 && this.jauge_astrale <= 40) {
+      this.bonus_3 = -5;
+    } else if (this.jauge_astrale > 40 && this.jauge_astrale < 60) {
+      this.bonus_3 = 0;
+    } else if (this.jauge_astrale >= 60 && this.jauge_astrale < 70) {
+      this.bonus_3 = 5;
+    } else if (this.jauge_astrale >= 70 && this.jauge_astrale < 80) {
+      this.bonus_3 = 10;
+    } else if (this.jauge_astrale >= 80 && this.jauge_astrale < 90) {
+      this.bonus_3 = 15;
+    } else if (this.jauge_astrale >= 90 && this.jauge_astrale < 100) {
+      this.bonus_3 = 20;
+    } else if (this.jauge_astrale === 100) {
+      this.bonus_3 = 25;
+    }
+    return this.bonus_3;
   }
 
   // Déduction de la découverte en fonction de tous les critères
@@ -155,6 +235,8 @@ export class AppComponent implements OnInit {
   }
 
   decouverte_objet() {
+    this.random_number_objet += this.astral_obj();
+
     switch (this.explo_niveau) {
       case 0: {
         if (this.random_number_objet <= 15) {
@@ -278,6 +360,8 @@ export class AppComponent implements OnInit {
 
 
   collectionneur() {
+    this.random_number_collectionneur += this.astral_collectionneur();
+
     switch (this.perso_niveau) {
       case 6: {
         if (this.random_number_collectionneur <= 80) {
