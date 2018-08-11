@@ -308,7 +308,7 @@ export class AppComponent implements OnInit {
       }
       case 4: {
         if (this.random_number_objet <= 20) {
-          this.resultat_objet = 'Trouve un cadavre d\'animal, donne entre 1 et 2 unités de nourriture, indigestion si consommé';
+          this.resultat_objet = 'Trouve un cadavre d\'animal, donne entre 1 et 2 unités de nourriture';
         } else if (this.random_number_objet > 20 && this.random_number_objet <= 45) {
           this.resultat_objet = 'Trouve un objet servant de monnaie d\'échange';
         } else if (this.random_number_objet > 45 && this.random_number_objet <= 65) {
@@ -322,7 +322,7 @@ export class AppComponent implements OnInit {
       }
       case 5: {
         if (this.random_number_objet <= 15) {
-          this.resultat_objet = 'Trouve un cadavre d\'animal, donne entre 1 et 2 unités de nourriture, indigestion si consommé';
+          this.resultat_objet = 'Trouve un cadavre d\'animal, donne entre 1 et 2 unités de nourriture';
         } else if (this.random_number_objet > 15 && this.random_number_objet <= 45) {
           this.resultat_objet = 'Trouve un objet servant de monnaie d\'échange';
         } else if (this.random_number_objet > 45 && this.random_number_objet <= 65) {
@@ -337,7 +337,7 @@ export class AppComponent implements OnInit {
 
       case 6: {
         if (this.random_number_objet <= 5) {
-          this.resultat_objet = 'Trouve un cadavre d\'animal, donne entre 1 et 2 unités de nourriture, indigestion si consommé';
+          this.resultat_objet = 'Trouve un cadavre d\'animal, donne entre 1 et 2 unités de nourriture';
         } else if (this.random_number_objet > 5 && this.random_number_objet <= 40) {
           this.resultat_objet = 'Trouve un objet servant de monnaie d\'échange';
         } else if (this.random_number_objet > 40 && this.random_number_objet <= 60) {
